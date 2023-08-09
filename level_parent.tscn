@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c03clbjgs48x2"]
+
+[ext_resource type="Script" path="res://Level_parent.cs" id="1_15p8v"]
+[ext_resource type="PackedScene" uid="uid://dwfwswhphisb7" path="res://UI/ui_inventory.tscn" id="2_tkcgh"]
+
+[node name="Level_Parent" type="Node2D"]
+script = ExtResource("1_15p8v")
+
+[node name="UILayer" type="CanvasLayer" parent="."]
+
+[node name="UI_Inventory" parent="UILayer" instance=ExtResource("2_tkcgh")]
+offset_right = -131.0
+offset_bottom = -85.0

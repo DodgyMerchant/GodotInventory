@@ -1,0 +1,12 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://ftfc0i1qelfd"]
+
+[ext_resource type="SystemFont" uid="uid://bteadrk0yd02d" path="res://new_system_font.tres" id="1_vbobx"]
+
+[resource]
+default_font = ExtResource("1_vbobx")
+GridContainer/constants/h_separation = 9
+GridContainer/constants/v_separation = 9
+MarginContainer/constants/margin_bottom = 9
+MarginContainer/constants/margin_left = 9
+MarginContainer/constants/margin_right = 9
+MarginContainer/constants/margin_top = 9

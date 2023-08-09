@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwfwswhphisb7"]
+
+[ext_resource type="Theme" uid="uid://ftfc0i1qelfd" path="res://UI/UI_Theme.tres" id="1_rh7a5"]
+[ext_resource type="Texture2D" uid="uid://bc2hd5e6hea0u" path="res://Sprites/UI/UIBG_nineSlice16.png" id="2_6x0x2"]
+[ext_resource type="Script" path="res://UI/Ui_inventory.cs" id="2_nhg5r"]
+[ext_resource type="PackedScene" uid="uid://byskbv18ymiee" path="res://UI/ui_inventory_slot.tscn" id="3_t1jto"]
+
+[node name="UI_Inventory" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("1_rh7a5")
+script = ExtResource("2_nhg5r")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 1
+offset_right = 184.0
+offset_bottom = 144.0
+texture = ExtResource("2_6x0x2")
+region_rect = Rect2(0, 0, 48, 48)
+patch_margin_left = 9
+patch_margin_top = 9
+patch_margin_right = 9
+patch_margin_bottom = 9
+
+[node name="MarginContainer" type="MarginContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="NinePatchRect/MarginContainer"]
+layout_mode = 2
+columns = 4
+
+[node name="UI_InventorySlot" parent="NinePatchRect/MarginContainer/GridContainer" instance=ExtResource("3_t1jto")]
+layout_mode = 2
